@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>V7 fetch HTML</title>
+</head>
+<body>
+    <h1>HTML V7 testing </h1>
+    <button id="fetchHtmlButton">Fetch HTML</button>
+    <!-- <button id="findBtn">Find Products</button> -->
+    <button id="goNextProduct">Show Next Product</button>
+    <button id="goNextPage">Load Next Page</button>
+    
+    <div id="productNumber" style="background-color: burlywood; font-size: 50px;">product: NONE</div>
+    <div id="pageNumber" style="background-color: rgb(135, 222, 174); font-size: 50px;">page: NONE</div>
+
+    <div style="background-color: rgb(165, 219, 255); padding: 50px;">
+        <h1>Find the most similar Products by Ingredients</h1>
+        <h3>Copy here ingredients List</h3>
+        <textarea id="textareaPaste" style="height: 150px; width: 300px;"></textarea>
+        <div id="testSelected" style="background-color: lime;"></div>
+        <button id="FindCosmetics">Find Similar Cosmetics</button>
+        <div id="ingredients" style="background-color: rgb(71, 177, 219);"></div>
+    </div>
+
+    <div id="igredList" style="background-color: rgb(255, 40, 148);">Ingredients List; id="igredList"</div>
+    <div id="finder" style="background-color: lime;"></div>
+    <pre id="htmlContent"></pre>
+    <div id="pageResult" style="background-color: burlywood;"></div>
+
+
+
+
+
+    <script src="app.js">
+        document.getElementById("fetchHtmlButton").addEventListener('click', () => {
+            loadPage_productList(1)
+        })
+    </script>
+</body>
+</html>
